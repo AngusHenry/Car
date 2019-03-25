@@ -1,7 +1,6 @@
 /*
  * Angus Henry
  * 22/ 03/ 2019
- *  This program creates car profiles
  */
 
 package cartester;
@@ -16,16 +15,25 @@ public class CarTester {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       String choice = JOptionPane.showInputDialog(
-      "Creating Car object:\n"
-      + "1 - Insert your Car\n"
-      + "2 - Generate a random Car\n"
-      + "3 - Insert your car and we will make it look better");
-       
-       if (choice.equals("2") ){
-        
-       }
-           
+    Car car1 = new Car("Subaru", "Forester", 27995, 2019, 12000, 4);
+    Car car2 = new Car("Honda", "Fit");
+    Car car3 = new Car();
+
+       //Print the details of each car
+    System.out.println(car1.toString());
+    System.out.println("--------------------------");
+
+    System.out.println(car2.toString());
+    System.out.println("--------------------------");
+
+    //toString() is called by default, no need to write it!
+    System.out.println(car3);
+    System.out.println("--------------------------"); 
+    car1.honk();
+    car2.beep();
     }
+    
+    
+
     
 }
